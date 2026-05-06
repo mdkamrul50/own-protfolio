@@ -20,6 +20,7 @@ import {
   SiMongodb,
   SiVercel,
   SiPostman,
+  SiNextdotjs,
 } from 'react-icons/si';
 
 import {
@@ -42,70 +43,69 @@ const SkillsSection = () => {
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
-  const categories = [
-    {
-      id: 1,
-      title: 'Frontend',
-      icon: FaReact,
-      color: 'from-blue-400 to-cyan-400',
-      skills: [
-        { name: 'HTML5', icon: FaHtml5 },
-        { name: 'CSS3', icon: FaCss3Alt },
-        { name: 'Tailwind CSS', icon: SiTailwindcss },
-        { name: 'JavaScript', icon: SiJavascript },
-        { name: 'React.js', icon: FaReact },
-        { name: 'Next.js', icon: FaReact },
-      ],
-    },
-    {
-      id: 2,
-      title: 'Backend',
-      icon: FaNodeJs,
-      color: 'from-emerald-400 to-teal-400',
-      skills: [
-        { name: 'Node.js', icon: FaNodeJs },
-        { name: 'Express.js', icon: SiExpress },
-        { name: 'REST API', icon: TbApi },
-        { name: 'JWT Auth', icon: TbShieldLock },
-        { name: 'Better Auth', icon: TbShieldLock },
-      ],
-    },
-    {
-      id: 3,
-      title: 'Database',
-      icon: TbDatabase,
-      color: 'from-purple-400 to-violet-400',
-      skills: [
-        { name: 'MongoDB', icon: SiMongodb },
-        { name: 'Mongoose', icon: TbDatabase },
-      ],
-    },
-    {
-      id: 4,
-      title: 'Tools & DevOps',
-      icon: TbTools,
-      color: 'from-amber-400 to-orange-400',
-      skills: [
-        { name: 'Git', icon: FaGithub },
-        { name: 'GitHub', icon: FaGithub },
-        { name: 'VS Code', icon: TbTools },
-        { name: 'Postman', icon: SiPostman },
-        { name: 'Vercel', icon: SiVercel },
-      ],
-    },
-    {
-      id: 5,
-      title: 'UI/UX & Design',
-      icon: FaFigma,
-      color: 'from-pink-400 to-rose-400',
-      skills: [
-        { name: 'Figma', icon: FaFigma },
-        { name: 'Framer Motion', icon: TbBrandFramerMotion },
-        { name: 'Responsive Design', icon: TbDeviceMobile },
-      ],
-    },
-  ];
-
+ const categories = [
+   {
+     id: 1,
+     title: 'Frontend',
+     icon: FaReact,
+     color: 'from-blue-400 to-cyan-400',
+     skills: [
+       { name: 'HTML5', icon: FaHtml5, color: '#E34F26' },
+       { name: 'CSS3', icon: FaCss3Alt, color: '#1572B6' },
+       { name: 'Tailwind CSS', icon: SiTailwindcss, color: '#38BDF8' },
+       { name: 'JavaScript', icon: SiJavascript, color: '#F7DF1E' },
+       { name: 'React.js', icon: FaReact, color: '#61DAFB' },
+       { name: 'Next.js', icon: SiNextdotjs, color: '#ffffff' },
+     ],
+   },
+   {
+     id: 2,
+     title: 'Backend',
+     icon: FaNodeJs,
+     color: 'from-emerald-400 to-teal-400',
+     skills: [
+       { name: 'Node.js', icon: FaNodeJs, color: '#339933' },
+       { name: 'Express.js', icon: SiExpress, color: '#ffffff' },
+       { name: 'REST API', icon: TbApi, color: '#60A5FA' },
+       { name: 'JWT Auth', icon: TbShieldLock, color: '#A78BFA' },
+       { name: 'Better Auth', icon: TbShieldLock, color: '#A78BFA' },
+     ],
+   },
+   {
+     id: 3,
+     title: 'Database',
+     icon: TbDatabase,
+     color: 'from-purple-400 to-violet-400',
+     skills: [
+       { name: 'MongoDB', icon: SiMongodb, color: '#47A248' },
+       { name: 'Mongoose', icon: TbDatabase, color: '#ffffff' },
+     ],
+   },
+   {
+     id: 4,
+     title: 'Tools & DevOps',
+     icon: TbTools,
+     color: 'from-amber-400 to-orange-400',
+     skills: [
+       { name: 'Git', icon: FaGithub, color: '#F05032' },
+       { name: 'GitHub', icon: FaGithub, color: '#ffffff' },
+       { name: 'VS Code', icon: TbTools, color: '#3B82F6' },
+       { name: 'Postman', icon: SiPostman, color: '#FF6C37' },
+       { name: 'Vercel', icon: SiVercel, color: '#ffffff' },
+     ],
+   },
+   {
+     id: 5,
+     title: 'UI/UX & Design',
+     icon: FaFigma,
+     color: 'from-pink-400 to-rose-400',
+     skills: [
+       { name: 'Figma', icon: FaFigma, color: '#F24E1E' },
+       { name: 'Framer Motion', icon: TbBrandFramerMotion, color: '#0055FF' },
+       { name: 'Responsive Design', icon: TbDeviceMobile, color: '#22C55E' },
+     ],
+   },
+ ];
   return (
     <section
       id="skills-section"
@@ -128,15 +128,26 @@ const SkillsSection = () => {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Heading */}
         <div className="flex flex-col items-center text-center mb-20">
-          <div className="inline-flex items-center gap-3 px-6 py-2.5 rounded-full bg-white/5 border border-white/10 mb-6">
+          <div className="inline-flex items-center gap-3 px-6 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
             <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
             <span className="text-sm tracking-[3px] uppercase text-zinc-400">
               Expertise
             </span>
           </div>
 
-          <h2 className="text-7xl md:text-8xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white via-zinc-200 to-white">
+          <h2
+            className="relative text-5xl md:text-7xl font-bold tracking-tighter 
+  bg-gradient-to-r from-purple-300 via-blue-400 via-cyan-300 to-purple-300
+  bg-clip-text text-transparent"
+          >
             My Skills
+            {/* 🔥 Bottom Glow Shadow */}
+            <span
+              className="absolute left-1/2 -bottom-6 -translate-x-1/2 
+    w-[60%] h-10 
+    bg-gradient-to-r from-purple-500/30 via-blue-500/30 to-cyan-500/30 
+    blur-2xl rounded-full"
+            ></span>
           </h2>
           <p className="mt-6 text-xl text-zinc-400 max-w-md">
             Crafting exceptional digital experiences with modern technologies
@@ -184,23 +195,17 @@ const SkillsSection = () => {
                   <div className="grid grid-cols-3 gap-8">
                     {category.skills.map((skill, i) => {
                       const SkillIcon = skill.icon;
+
                       return (
                         <motion.div
                           key={i}
-                          initial={{ opacity: 0, scale: 0.7 }}
-                          whileInView={{ opacity: 1, scale: 1 }}
-                          transition={{ delay: 0.1 + i * 0.04 }}
-                          whileHover={{
-                            scale: 1.25,
-                            y: -8,
-                            rotate: [0, -12, 12, 0],
-                          }}
-                          className="flex flex-col items-center gap-3 group/item cursor-default"
-                          title={skill.name}
+                          whileHover={{ scale: 1.2, y: -5 }}
+                          className="flex flex-col items-center gap-2"
                         >
-                          <div className="w-20 h-20 flex items-center justify-center rounded-3xl bg-white/5 border border-white/10 group-hover/item:border-white/40 hover:bg-white/10 transition-all duration-300">
-                            <SkillIcon className="w-11 h-11 text-white" />
-                          </div>
+                          <SkillIcon
+                            className="w-11 h-11 transition-all duration-300 drop-shadow-lg"
+                            style={{ color: skill.color }}
+                          />
                         </motion.div>
                       );
                     })}

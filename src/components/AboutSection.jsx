@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { FaBriefcase, FaFolderOpen, FaUsers, FaAward } from 'react-icons/fa6';
+import { FaBriefcase, FaFolderOpen, FaUsers, FaAward, FaRocket, FaCode } from 'react-icons/fa6';
 import AboutImg from '@/assets/image.png';
 import Signature from '@/assets/Signature.png';
 
@@ -62,47 +62,117 @@ export default function AboutSection() {
             </div>
 
             {/* Stats - Premium Cards */}
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 pt-8">
+            <div className="grid grid-cols-2 lg:grid-cols-2 gap-6 pt-8">
               {/* Stat 1 */}
-              <div className="group bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 rounded-3xl p-6 transition-all duration-300 backdrop-blur-xl">
-                <div className="w-14 h-14 bg-gradient-to-br from-violet-500 to-fuchsia-500 rounded-2xl flex items-center justify-center mb-5 text-white text-3xl group-hover:scale-110 transition-transform">
-                  <FaBriefcase />
+              <div
+                className="group relative overflow-hidden bg-white/5 hover:bg-white/10 
+    border border-white/10 hover:border-purple-400/30 
+    rounded-3xl p-6 transition-all duration-300 backdrop-blur-xl
+    hover:scale-[1.03]"
+              >
+                {/* Icon */}
+                <div
+                  className="w-14 h-14 bg-gradient-to-br from-purple-500 to-blue-500 
+      rounded-2xl flex items-center justify-center mb-5 text-white text-2xl
+      group-hover:rotate-6 transition-transform"
+                >
+                  <FaCode />
                 </div>
-                <h3 className="text-5xl font-bold">2+</h3>
-                <p className="text-gray-400 mt-2 text-[15px]">
-                  Years Experience
+
+                {/* Title */}
+                <h3 className="text-3xl font-bold text-white">
+                  MERN Stack Focus
+                </h3>
+
+                {/* Description */}
+                <p className="text-gray-400 mt-2 text-[15px] leading-relaxed">
+                  Building scalable full-stack applications Using React,
+                  Node.js, Express & MongoDB with modern UI/UX practices.
                 </p>
+
+                {/* Glow */}
+                <div
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 
+      bg-gradient-to-r from-purple-500/10 to-blue-500/10 blur-xl transition"
+                />
               </div>
 
               {/* Stat 2 */}
-              <div className="group bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 rounded-3xl p-6 transition-all duration-300 backdrop-blur-xl">
-                <div className="w-14 h-14 bg-gradient-to-br from-violet-500 to-fuchsia-500 rounded-2xl flex items-center justify-center mb-5 text-white text-3xl group-hover:scale-110 transition-transform">
+              <div
+                className="group relative overflow-hidden bg-white/5 hover:bg-white/10 
+                  border border-white/10 hover:border-purple-400/30 
+                  rounded-3xl p-6 transition-all duration-300 backdrop-blur-xl
+                  hover:scale-[1.03]"
+              >
+                <div
+                  className="w-14 h-14 bg-gradient-to-br from-purple-500 to-blue-500 
+                    rounded-2xl flex items-center justify-center mb-5 text-white text-2xl
+                    group-hover:rotate-6 transition-transform"
+                >
                   <FaFolderOpen />
                 </div>
-                <h3 className="text-5xl font-bold">20+</h3>
+
+                <h3 className="text-4xl font-bold">10+</h3>
                 <p className="text-gray-400 mt-2 text-[15px]">
-                  Projects Completed
+                  Practice & Personal Projects
                 </p>
+
+                <div
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 
+                    bg-gradient-to-r from-purple-500/10 to-blue-500/10 blur-xl transition"
+                />
               </div>
 
               {/* Stat 3 */}
-              <div className="group bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 rounded-3xl p-6 transition-all duration-300 backdrop-blur-xl">
-                <div className="w-14 h-14 bg-gradient-to-br from-violet-500 to-fuchsia-500 rounded-2xl flex items-center justify-center mb-5 text-white text-3xl group-hover:scale-110 transition-transform">
-                  <FaUsers />
+              <div
+                className="group relative overflow-hidden bg-white/5 hover:bg-white/10 
+                  border border-white/10 hover:border-purple-400/30 
+                  rounded-3xl p-6 transition-all duration-300 backdrop-blur-xl
+                  hover:scale-[1.03]"
+              >
+                <div
+                  className="w-14 h-14 bg-gradient-to-br from-purple-500 to-blue-500 
+                    rounded-2xl flex items-center justify-center mb-5 text-white text-2xl
+                    group-hover:rotate-6 transition-transform"
+                >
+                  <FaCode />
                 </div>
-                <h3 className="text-5xl font-bold">15+</h3>
-                <p className="text-gray-400 mt-2 text-[15px]">Happy Clients</p>
+
+                <h3 className="text-4xl font-bold">5+</h3>
+                <p className="text-gray-400 mt-2 text-[15px]">
+                  MERN Stack Full Projects
+                </p>
+
+                <div
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 
+                    bg-gradient-to-r from-purple-500/10 to-blue-500/10 blur-xl transition"
+                />
               </div>
 
               {/* Stat 4 */}
-              <div className="group bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 rounded-3xl p-6 transition-all duration-300 backdrop-blur-xl">
-                <div className="w-14 h-14 bg-gradient-to-br from-violet-500 to-fuchsia-500 rounded-2xl flex items-center justify-center mb-5 text-white text-3xl group-hover:scale-110 transition-transform">
-                  <FaAward />
+              <div
+                className="group relative overflow-hidden bg-white/5 hover:bg-white/10 
+                  border border-white/10 hover:border-purple-400/30 
+                  rounded-3xl p-6 transition-all duration-300 backdrop-blur-xl
+                  hover:scale-[1.03]"
+              >
+                <div
+                  className="w-14 h-14 bg-gradient-to-br from-purple-500 to-blue-500 
+                    rounded-2xl flex items-center justify-center mb-5 text-white text-2xl
+                    group-hover:rotate-6 transition-transform"
+                >
+                  <FaRocket />
                 </div>
-                <h3 className="text-5xl font-bold">100%</h3>
+
+                <h3 className="text-4xl font-bold">Growth</h3>
                 <p className="text-gray-400 mt-2 text-[15px]">
-                  Commitment &amp; Dedication
+                  Continuous Learning & Improvement
                 </p>
+
+                <div
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 
+                    bg-gradient-to-r from-purple-500/10 to-blue-500/10 blur-xl transition"
+                />
               </div>
             </div>
 
@@ -110,7 +180,7 @@ export default function AboutSection() {
             <div className="pt-6">
               <a
                 href="#contact"
-                className="inline-flex items-center gap-3 px-8 py-4 bg-white text-black font-medium rounded-2xl hover:bg-white/90 transition-all hover:scale-105 active:scale-95"
+                className="inline-flex items-center gap-3 px-8 py-4 bg-linear-to-br from-[#040e35] via-[#1f1f1f] to-[#061446] text-blue-200 font-medium rounded-2xl hover:bg-white/90 transition-all hover:scale-105 active:scale-95"
               >
                 Let&apos;s Work Together
                 <span className="text-xl">→</span>

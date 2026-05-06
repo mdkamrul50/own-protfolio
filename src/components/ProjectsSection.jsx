@@ -56,7 +56,11 @@ export default function TimelineProjects() {
               Featured Work
             </span>
           </div>
-          <h2 className="text-6xl md:text-7xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white via-purple-200 to-white">
+          <h2
+            className="text-6xl md:text-7xl font-bold tracking-tighter 
+  bg-gradient-to-r from-indigo-600 via-purple-600 via-pink-600 to-cyan-400 
+  bg-clip-text text-transparent"
+          >
             Projects Timeline
           </h2>
         </div>
