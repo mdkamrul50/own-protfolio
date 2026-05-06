@@ -2,7 +2,8 @@
 
 import Image from 'next/image';
 import { FaBriefcase, FaFolderOpen, FaUsers, FaAward } from 'react-icons/fa6';
-import AboutImg from "@/assets/image.png";
+import AboutImg from '@/assets/image.png';
+import Signature from '@/assets/Signature.png';
 
 export default function AboutSection() {
   return (
@@ -25,36 +26,39 @@ export default function AboutSection() {
                 />
               </div>
             </div>
+            {/* Signature */}
+            <div className="">
+              <Image
+                src={Signature}
+                alt="Kamrul Signature"
+                width={300}
+                height={100}
+                className="
+  drop-shadow-[0_6px_12px_rgba(168,85,247,0.3)]
+  drop-shadow-[0_10px_20px_rgba(139,92,246,0.3)]
+  drop-shadow-[0_14px_28px_rgba(59,130,246,0.3)] invert(80%) brightness-0
+"
+              />
+            </div>
           </div>
 
           {/* Content */}
           <div className="flex-1 space-y-10">
             <div>
               <h2 className="text-4xl lg:text-5xl font-semibold leading-tight tracking-tight">
-                I&apos;m Ashikur Rahman, a passionate <br />
+                I&apos;m Kamrul, a passionate <br />
                 <span className="bg-gradient-to-r from-violet-400 via-fuchsia-400 to-cyan-400 bg-clip-text text-transparent">
                   MERN Stack Developer
                 </span>
                 .
               </h2>
 
-              <p className="mt-6 text-lg text-gray-300 max-w-2xl leading-relaxed">
-                With a strong foundation in JavaScript ecosystem, I build
-                performant, scalable, and user-friendly web applications. I love
-                turning complex problems into simple, elegant and beautiful
-                solutions.
+              <p className="mt-6 text-lg text-gray-500 max-w-2xl leading-relaxed">
+                I specialize in building modern MERN stack applications that are
+                fast, scalable, and user-focused. I enjoy solving complex
+                problems and transforming ideas into clean, efficient, and
+                real-world solutions.
               </p>
-
-              {/* Signature */}
-              <div className="mt-10">
-                <Image
-                  src="/signature.png"
-                  alt="Ashikur Rahman Signature"
-                  width={300}
-                  height={100}
-                  className="opacity-90"
-                />
-              </div>
             </div>
 
             {/* Stats - Premium Cards */}

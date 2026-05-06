@@ -5,9 +5,52 @@ import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import Image from 'next/image';
 import { FiDownload, FiSend } from 'react-icons/fi';
-import HeroImg from "@/assets/hero-img.png";
+import HeroImg from '@/assets/hero-img.png';
+
+import { useEffect, useState } from 'react';
+import { FaHandSparkles } from 'react-icons/fa6';
+const roles = [
+  'MERN Stack Developer',
+  'Frontend Developer',
+  'Problem Solver',
+  'UI/UX Enthusiast',
+];
 
 export default function HeroSection() {
+  const [index, setIndex] = useState(0);
+  const [text, setText] = useState('');
+  const [charIndex, setCharIndex] = useState(0);
+  const [deleting, setDeleting] = useState(false);
+
+  useEffect(() => {
+    const current = roles[index];
+
+    const timeout = setTimeout(
+      () => {
+        if (!deleting) {
+          setText(current.substring(0, charIndex + 1));
+          setCharIndex(charIndex + 1);
+
+          if (charIndex === current.length) {
+            setDeleting(true);
+            setTimeout(() => {}, 1000);
+          }
+        } else {
+          setText(current.substring(0, charIndex - 1));
+          setCharIndex(charIndex - 1);
+
+          if (charIndex === 0) {
+            setDeleting(false);
+            setIndex((prev) => (prev + 1) % roles.length);
+          }
+        }
+      },
+      deleting ? 60 : 90
+    );
+
+    return () => clearTimeout(timeout);
+  }, [charIndex, deleting, index]);
+
   return (
     <div className="min-h-screen bg-linear-to-br from-[#020617] via-[#0b0f1a] to-[#020617] text-white flex items-center justify-center px-6">
       <div className="max-w-7xl w-full grid md:grid-cols-2 gap-10 items-center">
@@ -26,31 +69,59 @@ export default function HeroSection() {
           </div>
 
           {/* Heading */}
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-            I code scalable ideas into{' '}
-            <span className="bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
-              real world
-            </span>{' '}
-            <span className="bg-gradient-to-r from-purple-500 to-blue-400 text-transparent bg-clip-text">
-              solutions.
+          <div>
+            {/* Welcome line */}
+            <span className="inline-flex items-center gap-3 text-2xl px-5 py-3 rounded-full border border-white/10 bg-white/5 backdrop-blur-md shadow-lg">
+              {/* Icon */}
+              <FaHandSparkles className="text-purple-400 animate-pulse" />
+
+              {/* Text */}
+              <span className="text-gray-200">
+                Hey! I am{' '}
+                <span className="font-semibold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                  KAMRUL
+                </span>
+              </span>
             </span>
-          </h1>
+            <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+              <span className="text-5xl">I code</span>{' '}
+              <span className="italic bg-gradient-to-r from-blue-900 via-purple-400 to-pink-900 bg-clip-text text-transparent">
+                scalable
+              </span>{' '}
+              <span className="text-5xl">ideas</span> into{' '}
+              <span className="bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
+                real world
+              </span>{' '}
+              <span className="bg-gradient-to-r from-purple-500 to-blue-400 text-transparent bg-clip-text">
+                solutions.
+              </span>
+            </h1>
+            <span className="text-2xl tracking-wide bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent font-medium">
+              {text}
+              <span className="animate-pulse text-white ">|</span>
+            </span>
+          </div>
 
           {/* Subtext */}
           <p className="text-gray-400 mt-6 max-w-md">
-            I design and develop modern web applications that are fast, secure
-            and built for growth.
+            I build scalable MERN stack applications with modern UI, secure
+            backend, and performance-driven architecture.
           </p>
 
           {/* Buttons */}
-          <div className="flex flex-wrap gap-6 items-center">
-            <button className="group relative px-8 py-4 rounded-xl bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-semibold hover:scale-105 transition-all duration-300 shadow-[0_0_30px_rgba(99,102,241,0.3)] flex items-center gap-3">
+          <div className="flex flex-wrap gap-6 items-center mt-10">
+            <button className="group relative px-8 py-3 rounded-xl bg-gradient-to-r from-indigo-800 to-blue-900 text-white font-semibold hover:scale-105 transition-all duration-300 shadow-[0_0_30px_rgba(99,102,241,0.3)] flex items-center gap-3">
               VIEW MY WORK
               <FiSend className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+              <span
+                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent 
+                   translate-x-[-200%] group-hover:translate-x-[200%] transition duration-1000"
+              />
             </button>
-            <button className="group px-8 py-4 rounded-xl text-gray-300 font-semibold hover:text-white transition-colors flex items-center gap-3">
-              DOWNLOAD RESUME
-              <FiDownload className="w-4 h-4 group-hover:translate-y-1 transition-transform" />
+            <button className="group px-8 py-3 rounded-xl text-sm font-medium              text-gray-300 flex items-center gap-3 backdrop-blur-md  hover:text-white hover:border-purple-400/40 hover:bg-blue-950/10             transition-all duration-300 ease-in-out             hover:shadow-[0_10px_30px_rgba(168,85,247,0.25)]             hover:-translate-y-0.5">
+              {' '}
+              <span className="tracking-wide"> DOWNLOAD RESUME </span>{' '}
+              <FiDownload className="w-4 h-4 text-purple-300                         group-hover:translate-y-1 group-hover:text-white                         transition duration-300" />
             </button>
           </div>
         </motion.div>
@@ -138,7 +209,7 @@ export default function HeroSection() {
               <span className="text-yellow-300">{'{'}</span>
               {'\n'}
               <span className="text-gray-400"> name: </span>
-              <span className="text-emerald-300">"Ashikur Rahman"</span>
+              <span className="text-emerald-300">"MD.Kamrul"</span>
               <span className="text-white">,</span>
               {'\n'}
               <span className="text-gray-400"> stack: </span>
@@ -150,10 +221,8 @@ export default function HeroSection() {
               <span className="text-emerald-300">"Tailwind"</span>
               <span className="text-white">],</span>
               {'\n'}
-              <span className="text-gray-400"> passion: </span>
-              <span className="text-emerald-300">
-                "Building Digital Products"
-              </span>
+              <span className="text-gray-400"> profession: </span>
+              <span className="text-emerald-300">"MERN Stack Developer"</span>
               <span className="text-white">,</span>
               {'\n'}
               <span className="text-gray-400"> available: </span>
@@ -173,7 +242,12 @@ export default function HeroSection() {
 
       {/* Social Icons */}
       <div className="absolute right-18 top-1/2 -translate-y-1/2 hidden xl:flex z-20">
-        <div className="flex flex-col gap-8 bg-[#0D111A]/50 border border-white/5 p-4 py-8 rounded-full backdrop-blur-md">
+        <div
+          className="flex flex-col gap-8 bg-[#0D111A]/50 border border-white/5 p-4 py-8 rounded-full backdrop-blur-md
+                shadow-[0_0_25px_rgba(168,85,247,0.08)]
+                hover:shadow-[0_0_45px_rgba(168,85,247,0.25)]
+                transition-all duration-500 ease-in-out"
+        >
           <FaGithub className="w-5 h-5 text-gray-400 hover:text-white transition-colors cursor-pointer" />
           <FaLinkedin className="w-5 h-5 text-gray-400 hover:text-white transition-colors cursor-pointer" />
           <FaTwitter className="w-5 h-5 text-gray-400 hover:text-white transition-colors cursor-pointer" />

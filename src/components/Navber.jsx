@@ -6,6 +6,8 @@ import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 import Logo from '@/assets/my-logo.png';
 import Image from 'next/image';
+import {  FaPaperPlane, FaRocket } from 'react-icons/fa6';
+import { HiArrowUpRight } from 'react-icons/hi2';
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
@@ -123,18 +125,25 @@ export default function Navbar() {
           <div className="hidden md:block">
             <Link
               href="/contact"
-              className="relative px-8 py-3.5 rounded-2xl font-medium text-white 
-                         bg-white/10 backdrop-blur-2xl border border-white/20 
-                         hover:border-purple-400/50 hover:bg-white/15 
-                         transition-all duration-300 shadow-xl shadow-purple-500/10
-                         flex items-center gap-2 group overflow-hidden"
+              onClick={() => setIsOpen(false)}
+              className="group mx-auto  inline-flex items-center gap-3 px-10 py-3 rounded-2xl 
+             text-white font-medium relative overflow-hidden
+             backdrop-blur-xl border border-white/20
+             bg-gradient-to-r from-white/10 via-purple-500/10 to-blue-500/10
+             hover:border-purple-400/50 transition duration-300
+             hover:scale-[1.03]"
             >
-              <span className="relative z-10">LET'S TALK</span>
-              <span className="group-hover:rotate-45 transition-transform relative z-10">
-                ↗
-              </span>
+              {/* 🔥 Soft Moving Glow */}
+              <span
+                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent 
+                   translate-x-[-200%] group-hover:translate-x-[200%] transition duration-1000"
+              />
 
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+              {/* Icon */}
+              <FaPaperPlane className="text-purple-300 group-hover:translate-x-1 transition" />
+
+              {/* Text */}
+              <span className="relative z-10 tracking-wide">LET'S TALK</span>
             </Link>
           </div>
 
@@ -178,10 +187,24 @@ export default function Navbar() {
               <Link
                 href="/contact"
                 onClick={() => setIsOpen(false)}
-                className="mx-auto mt-6 px-10 py-4 rounded-2xl text-white font-medium 
-                           bg-white/10 backdrop-blur-xl border border-white/20 hover:border-purple-400/50"
+                className="group relative mx-auto mt-6 inline-flex items-center gap-3 px-10 py-4 
+             rounded-2xl text-sm font-semibold tracking-widest text-white
+             bg-neutral-950 border border-white/10 overflow-hidden
+             transition-all duration-500 hover:border-purple-500/50 
+             hover:shadow-[0_0_30px_-5px_rgba(168,85,247,0.4)]"
               >
-                LET'S TALK
+                <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover:animate-[shimmer_1.5s_infinite]" />
+
+                {/* Text */}
+                <span className="relative z-10 transition-colors duration-300">
+                  LET'S TALK
+                </span>
+
+                {/* Premium Icon */}
+                <HiArrowUpRight className="relative z-10 text-lg text-purple-400 group-hover:text-white group-hover:rotate-45 transition-all duration-500" />
+
+                {/* Background Glow on Hover */}
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 to-blue-900/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </Link>
             </div>
           </div>
