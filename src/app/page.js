@@ -1,4 +1,6 @@
 import AboutSection from "@/components/AboutSection";
+import ContactMe from "@/components/ContactMe";
+import FeaturedProject from "@/components/FeaturedProject";
 import HeroSection from "@/components/HeroSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import Services from "@/components/Services";
@@ -15,8 +17,10 @@ export default function Home() {
       <AboutSection></AboutSection>
       <SkillsSection></SkillsSection>
       <ProjectsSection></ProjectsSection>
+      <FeaturedProject></FeaturedProject>
       <Services></Services>
       <WorkFlow></WorkFlow>
+      <ContactMe></ContactMe>
     </div>
   );
 }
