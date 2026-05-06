@@ -65,12 +65,12 @@ export default function ContactSection() {
           <div className="space-y-4">
             <div className="flex items-center gap-3 text-gray-400 hover:text-white transition">
               <FaEnvelope className="text-purple-400" />
-              <span>yourmail@gmail.com</span>
+              <span>kamrul.dev.web@gmail.com</span>
             </div>
 
             <div className="flex items-center gap-3 text-gray-400 hover:text-white transition">
               <FaPhoneAlt className="text-purple-400" />
-              <span>+880 1234-567890</span>
+              <span>+880 1772237629</span>
             </div>
 
             <div className="flex items-center gap-3 text-gray-400 hover:text-white transition">
@@ -82,13 +82,13 @@ export default function ContactSection() {
           {/* Social Links */}
           <div className="flex gap-4 pt-2">
             <a
-              href="#"
+              href="https://github.com/mdkamrul50"
               className="p-3 rounded-xl bg-white/5 border border-white/10 hover:bg-purple-500/20 transition"
             >
               <FaGithub />
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/in/md-kamrul-20a5a2271"
               className="p-3 rounded-xl bg-white/5 border border-white/10 hover:bg-purple-500/20 transition"
             >
               <FaLinkedin />
@@ -105,56 +105,70 @@ export default function ContactSection() {
         <motion.form
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
-          onSubmit={handleSubmit}
-          whileHover={{ y: -5 }}
-          className="relative p-8 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 space-y-5 group transition duration-300"
+          transition={{ duration: 0.6, ease: 'easeOut' }}
+          whileHover={{ y: -6, scale: 1.01 }}
+          className="relative p-8 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 space-y-5 group overflow-hidden"
         >
-          {/* 🔥 Hover Gradient Border (Balanced Premium) */}
-          <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition duration-500 pointer-events-none">
-            <div className="absolute inset-0 rounded-2xl border border-transparent bg-gradient-to-r from-purple-500/30 to-blue-500/30" />
+          {/* ✨ Smooth Animated Gradient Border */}
+          <div className="absolute inset-0 rounded-2xl p-[1px] opacity-0 group-hover:opacity-100 transition duration-500">
+            <div className="w-full h-full rounded-2xl bg-gradient-to-r from-purple-950/80 via-blue-950/90 to-cyan-950/90 blur-[1px]" />
           </div>
 
-          {/* Name */}
-          <div className="relative">
-            <FaUser className="absolute left-3 top-3 text-purple-400/70" />
-            <input
-              name="name"
-              value={form.name}
+          {/* Inner content wrapper (keeps form clean) */}
+          <div className="relative z-10 space-y-5">
+            {/* Name */}
+            <div className="relative">
+              <FaUser className="absolute left-3 top-3 text-purple-400/70" />
+              <input
+                name="name"
+                value={form.name}
+                onChange={handleChange}
+                placeholder="Your Name"
+                className="w-full pl-10 py-3 bg-black/20 border border-white/10 rounded-lg outline-none
+        focus:border-purple-400 focus:bg-black/30 transition-all duration-300
+        focus:shadow-[0_0_20px_rgba(168,85,247,0.2)]"
+              />
+            </div>
+
+            {/* Email */}
+            <div className="relative">
+              <FaEnvelope className="absolute left-3 top-3 text-purple-400/70" />
+              <input
+                name="email"
+                value={form.email}
+                onChange={handleChange}
+                placeholder="Your Email"
+                className="w-full pl-10 py-3 bg-black/20 border border-white/10 rounded-lg outline-none
+        focus:border-blue-400 focus:bg-black/30 transition-all duration-300
+        focus:shadow-[0_0_20px_rgba(59,130,246,0.2)]"
+              />
+            </div>
+
+            {/* Message */}
+            <textarea
+              name="message"
+              value={form.message}
               onChange={handleChange}
-              placeholder="Your Name"
-              className="w-full pl-10 py-3 bg-black/20 border border-white/10 rounded-lg outline-none focus:border-purple-400 focus:bg-black/30 transition"
+              placeholder="Your Message..."
+              rows="5"
+              className="w-full p-3 bg-black/20 border border-white/10 rounded-lg outline-none
+      focus:border-purple-400 focus:bg-black/30 transition-all duration-300
+      focus:shadow-[0_0_25px_rgba(168,85,247,0.15)]"
             />
+
+            {/* Button */}
+            <button
+              type="submit"
+              className="w-full flex items-center justify-center gap-2 py-3 rounded-lg
+      bg-gradient-to-r from-purple-500 to-blue-500
+      hover:from-purple-600 hover:to-blue-600
+      transition-all duration-300 font-medium
+      hover:shadow-[0_0_25px_rgba(99,102,241,0.35)]
+      active:scale-[0.98]"
+            >
+              Send Message <FaPaperPlane />
+            </button>
           </div>
-
-          {/* Email */}
-          <div className="relative">
-            <FaEnvelope className="absolute left-3 top-3 text-purple-400/70" />
-            <input
-              name="email"
-              value={form.email}
-              onChange={handleChange}
-              placeholder="Your Email"
-              className="w-full pl-10 py-3 bg-black/20 border border-white/10 rounded-lg outline-none focus:border-purple-400 focus:bg-black/30 transition"
-            />
-          </div>
-
-          {/* Message */}
-          <textarea
-            name="message"
-            value={form.message}
-            onChange={handleChange}
-            placeholder="Your Message..."
-            rows="5"
-            className="w-full p-3 bg-black/20 border border-white/10 rounded-lg outline-none focus:border-purple-400 focus:bg-black/30 transition"
-          />
-
-          {/* Button */}
-          <button
-            type="submit"
-            className="w-full flex items-center justify-center gap-2 py-3 rounded-lg bg-gradient-to-r from-purple-500 to-blue-500 hover:opacity-90 transition font-medium"
-          >
-            Send Message <FaPaperPlane />
-          </button>
         </motion.form>
       </div>
     </section>

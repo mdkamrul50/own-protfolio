@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import Feature from '@/assets/feature.png';
 
 export default function FeaturedProject() {
   return (
@@ -13,7 +14,6 @@ export default function FeaturedProject() {
         <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-[120px]" />
       </div>
 
-      
       {/* Heading */}
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
@@ -37,7 +37,7 @@ export default function FeaturedProject() {
             {/* 🔥 IMAGE SIDE */}
             <div className="relative h-[300px] md:h-full overflow-hidden">
               <Image
-                src="https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg"
+                src={Feature}
                 alt="Featured Project"
                 fill
                 className="object-cover group-hover:scale-105 transition duration-700"
@@ -55,19 +55,27 @@ export default function FeaturedProject() {
               </span>
 
               {/* Title */}
-              <h3 className="text-3xl font-bold mb-4">
-                Modern E-Commerce Platform
-              </h3>
+              <h3 className="text-3xl font-bold mb-4">skill-sphere</h3>
 
               {/* Description */}
               <p className="text-gray-400 leading-relaxed mb-6">
-                A full-stack MERN e-commerce application with authentication,
-                cart system, payment integration, and admin dashboard.
+                Skill Sphere is a modern web application built with Next.js that
+                provides a smooth and fast user experience for managing and
+                exploring skills in an organized way.
               </p>
 
               {/* Tech stack */}
               <div className="flex flex-wrap gap-2 mb-6">
-                {['React', 'Node.js', 'MongoDB', 'Stripe'].map((tech, i) => (
+                {[
+                  'NEXT.js',
+                  'Tailwind CSS',
+                  'App Router (Next.js 13+)',
+                  'Framer Motion',
+                  'Server Components',
+                  'Client Components',
+                  'REST API / Fetch API',
+                  'Responsive Design',
+                ].map((tech, i) => (
                   <span
                     key={i}
                     className="px-3 py-1 text-xs bg-white/10 border border-white/20 rounded-full"
@@ -80,7 +88,7 @@ export default function FeaturedProject() {
               {/* Buttons */}
               <div className="flex gap-4">
                 <a
-                  href="#"
+                  href="https://skill-sphere-phi-nine.vercel.app"
                   target="_blank"
                   className="flex items-center gap-2 px-5 py-2 rounded-lg bg-gradient-to-r from-purple-500 to-blue-500 hover:opacity-90 transition"
                 >
@@ -88,7 +96,7 @@ export default function FeaturedProject() {
                 </a>
 
                 <a
-                  href="#"
+                  href="https://github.com/mdkamrul50/-SkillSphere"
                   target="_blank"
                   className="flex items-center gap-2 px-5 py-2 rounded-lg bg-white/10 border border-white/20 hover:bg-white/20 transition"
                 >

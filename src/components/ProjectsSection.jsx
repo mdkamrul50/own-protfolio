@@ -5,36 +5,41 @@ import { motion } from 'framer-motion';
 
 const projects = [
   {
-    title: 'E-Commerce Platform',
-    desc: 'Full-featured MERN stack e-commerce with cart, authentication, payment gateway, and admin dashboard.',
-    tech: ['Next.js', 'Tailwind', 'Node.js', 'MongoDB', 'Stripe'],
-    year: '2025',
-    image:
-      'https://images.unsplash.com/photo-1557821552-171052ccc328?w=800&q=80',
+    title: 'Game Vault',
+    desc: 'Game Vault Library is a modern web application that helps users organize and manage their personal game collection in one place. It provides a clean and user-friendly interface to browse, track, and view game details easily. The platform focuses on smooth performance and a simple experience, making game management more organized and visually appealing for gamers.',
+    tech: ['React.js', 'Tailwind', 'Daisy UI', 'react Icon'],
+    year: '2026',
+    image: 'https://i.ibb.co.com/whhBpBX4/Screenshot-2026-04-11-173158.png',
   },
   {
-    title: 'Course Selling Website',
-    desc: 'Modern online learning platform with video streaming, instructor dashboard, and secure payments.',
-    tech: ['React', 'Express', 'MongoDB', 'JWT', 'Cloudinary'],
-    year: '2024',
-    image:
-      'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80',
+    title: 'Close-Friends',
+    desc: 'Close Friends is a modern social web application built with React that allows users to stay connected with their close friends in a private and simple way. It focuses on small group interactions where users can create private circles, share updates, photos, and moments only with selected people. The app is designed to feel more personal than traditional social media, offering a clean interface, smooth user experience, and fast performance. It helps users maintain stronger relationships by keeping communication more private, meaningful, and organized.',
+    tech: ['React', 'Tailwind', 'Daisy UI'],
+    year: '2026',
+    image: 'https://i.ibb.co.com/nMjYLGz5/Screenshot-2026-05-06-204514.png',
   },
   {
-    title: 'Analytics Admin Dashboard',
-    desc: 'Powerful real-time analytics dashboard with role-based access, charts, and data visualization.',
-    tech: ['Next.js', 'Recharts', 'Tailwind', 'Express'],
-    year: '2024',
-    image:
-      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80',
+    title: 'skill-sphere',
+    desc: 'Skill Sphere is a modern web application built with Next.js that provides a smooth and fast user experience for managing and exploring skills in an organized way. It is designed with a clean UI, responsive layout, and optimized performance using server-side rendering features of Next.js.',
+    tech: [
+      'NEXT.js',
+      'Tailwind CSS',
+      'App Router (Next.js 13+)',
+      'Framer Motion',
+      'Server Components',
+      'Client Components',
+      'REST API / Fetch API',
+      'Responsive Design',
+    ],
+    year: '2026',
+    image: 'https://i.ibb.co.com/q32tJhQy/Screenshot-2026-05-06-205715.png',
   },
   {
     title: 'Modern Portfolio Website',
     desc: 'High-performance animated portfolio with Framer Motion, glassmorphism, and smooth interactions.',
     tech: ['Next.js', 'Framer Motion', 'Tailwind'],
-    year: '2025',
-    image:
-      'https://images.unsplash.com/photo-1507238691740-187a5b1c7c8f?w=800&q=80',
+    year: '2026',
+    image: 'https://i.ibb.co.com/qLQDbykS/Screenshot-2026-05-06-210741.png',
   },
 ];
 
@@ -93,10 +98,10 @@ export default function TimelineProjects() {
                         alt={project.title}
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#0a0d1c] via-[#0a0d1c]/80 to-transparent" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#0a0d1cdc] via-[#0a0d1c]/40 to-transparent" />
 
                       {/* Year Badge */}
-                      <div className="absolute top-5 right-5 inline-flex items-center px-4 py-1.5 text-xs font-mono tracking-widest border border-white/20 bg-black/70 backdrop-blur-md rounded-full">
+                      <div className="absolute top-5 right-5 inline-flex items-center px-4 py-1.5 text-xs font-mono tracking-widest border border-white/20 bg-black/50 text-blue-700 backdrop-blur-md rounded-full">
                         {project.year}
                       </div>
                     </div>
