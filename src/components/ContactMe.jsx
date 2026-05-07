@@ -29,7 +29,10 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="relative py-28 px-6 bg-[#0a0d1c] text-white overflow-hidden">
+    <section
+      id="Contact"
+      className="relative py-28 px-6 bg-[#0a0d1c] text-white overflow-hidden scroll-mt-28"
+    >
       {/* 🔥 Soft Background Glow */}
       <div className="absolute w-[400px] h-[400px] bg-purple-600/15 blur-[140px] top-10 left-10" />
       <div className="absolute w-[400px] h-[400px] bg-blue-600/15 blur-[140px] bottom-10 right-10" />

@@ -46,7 +46,7 @@ export default function Navbar() {
             </Link>
 
             <Link
-              href="/about"
+              href="#About"
               className={`relative font-medium transition-all duration-300 
                 ${
                   isActive('/about')
@@ -61,7 +61,7 @@ export default function Navbar() {
             </Link>
 
             <Link
-              href="/services"
+              href="#Service"
               className={`relative font-medium transition-all duration-300 
                 ${
                   isActive('/services')
@@ -76,7 +76,7 @@ export default function Navbar() {
             </Link>
 
             <Link
-              href="/projects"
+              href="#Project"
               className={`relative font-medium transition-all duration-300 
                 ${
                   isActive('/projects')
@@ -91,7 +91,7 @@ export default function Navbar() {
             </Link>
 
             <Link
-              href="/blog"
+              href="#skills-section"
               className={`relative font-medium transition-all duration-300 
                 ${
                   isActive('/blog')
@@ -99,14 +99,14 @@ export default function Navbar() {
                     : 'text-white/70 hover:text-white'
                 }`}
             >
-              Blog
+              Skills
               {isActive('/blog') && (
                 <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-purple-400 to-violet-500 rounded-full"></span>
               )}
             </Link>
 
             <Link
-              href="/contact"
+              href="#Contact"
               className={`relative font-medium transition-all duration-300 
                 ${
                   isActive('/contact')

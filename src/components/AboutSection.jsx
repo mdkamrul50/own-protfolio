@@ -7,7 +7,10 @@ import Signature from '@/assets/Signature.png';
 
 export default function AboutSection() {
   return (
-    <section className="bg-linear-to-br from-[#02071b] via-[#0f0f0f] to-[#020719] py-20 px-6 lg:px-16 text-white overflow-hidden">
+    <section
+      id="About"
+      className="bg-linear-to-br from-[#02071b] via-[#0f0f0f] to-[#020719] py-20 px-6 lg:px-16 text-white overflow-hidden scroll-mt-28"
+    >
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-20">
           {/* Profile Image */}
@@ -16,7 +19,7 @@ export default function AboutSection() {
               {/* Premium Glow */}
               <div className="absolute inset-0 bg-gradient-to-br from-violet-500 via-fuchsia-500 to-cyan-400 rounded-[2.75rem] blur-3xl opacity-40 group-hover:opacity-50 transition-all duration-700"></div>
 
-              <div className="relative w-full h-full rounded-[2.75rem] overflow-hidden border border-white/10 shadow-2xl">
+              <div className="relative w-full h-full rounded-[2.75rem] overflow-hidden border border-white/10 shadow-2xl ">
                 <Image
                   src={AboutImg}
                   alt="MD.KAMRUL"
@@ -27,7 +30,7 @@ export default function AboutSection() {
               </div>
             </div>
             {/* Signature */}
-            <div className="">
+            <div className=" ">
               <Image
                 src={Signature}
                 alt="Kamrul Signature"
@@ -112,7 +115,7 @@ export default function AboutSection() {
                   <FaFolderOpen />
                 </div>
 
-                <h3 className="text-4xl font-bold">10+</h3>
+                <h3 className="text-4xl font-bold">20+</h3>
                 <p className="text-gray-400 mt-2 text-[15px]">
                   Practice & Personal Projects
                 </p>

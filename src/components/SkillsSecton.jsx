@@ -109,7 +109,7 @@ const SkillsSection = () => {
   return (
     <section
       id="skills-section"
-      className="relative min-h-screen py-24 overflow-hidden bg-[#0a0d1c]"
+      className="relative min-h-screen py-24 overflow-hidden bg-[#0a0d1c] scroll-mt-28"
     >
       {/* Animated Gradient Blobs */}
       <div className="absolute inset-0 pointer-events-none">

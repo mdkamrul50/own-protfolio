@@ -46,7 +46,10 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section className="relative py-28 px-6 bg-[#0a0d1c] text-white overflow-hidden">
+    <section
+      id="Service"
+      className="relative py-28 px-6 bg-[#0a0d1c] text-white overflow-hidden scroll-mt-28"
+    >
       {/* Background Blobs */}
       <div className="absolute w-[500px] h-[500px] bg-purple-600/10 blur-[140px] top-10 -left-20" />
       <div className="absolute w-[500px] h-[500px] bg-blue-600/10 blur-[140px] bottom-10 -right-20" />

@@ -1,2 +1,23 @@
 @import "tailwindcss";
 @import "@heroui/styles"; 
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-orbit {
+  animation: orbit 15s linear infinite;
+}
+
+.animate-spin-slow {
+  animation: orbit 10s linear infinite;
+}
+
+html {
+  scroll-behavior: smooth;
+}
