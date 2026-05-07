@@ -56,7 +56,10 @@ export default function HeroSection() {
   }, [charIndex, deleting, index]);
 
   return (
-    <div className="relative overflow-hidden min-h-screen bg-linear-to-br from-[#020617] via-[#0b0f1a] to-[#020617] text-white flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20">
+    <div
+    
+      className="relative overflow-hidden min-h-screen bg-linear-to-br from-[#020617] via-[#0b0f1a] to-[#020617] text-white flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20"
+    >
       <div className="max-w-7xl w-full grid lg:grid-cols-2 gap-16 lg:gap-10 items-center">
         {/* LEFT */}
         <motion.div
@@ -111,8 +114,10 @@ export default function HeroSection() {
 
           {/* Subtext */}
           <p className="text-sm sm:text-base text-gray-400 mt-6 max-w-xl mx-auto lg:mx-0">
-            I build scalable MERN stack applications with modern UI, secure
-            backend, and performance-driven architecture.
+            I build scalable{' '}
+            <span className="text-xl text-green-700">MERN</span> stack
+            applications with modern UI, secure backend, and performance-driven
+            architecture.
           </p>
 
           {/* Buttons */}
@@ -301,13 +306,19 @@ shadow-[0_0_30px_rgba(250,204,21,0.15)]"
                 hover:shadow-[0_0_45px_rgba(168,85,247,0.25)]
                 transition-all duration-500 ease-in-out"
         >
-          <FaGithub className="w-5 h-5 text-gray-400 hover:text-white transition-colors cursor-pointer" />
+          <a href="https://github.com/mdkamrul50">
+            <FaGithub className="w-5 h-5 text-gray-400 hover:text-blue-700 transition-colors cursor-pointer" />
+          </a>
 
-          <FaLinkedin className="w-5 h-5 text-gray-400 hover:text-white transition-colors cursor-pointer" />
+          <a href="https://www.linkedin.com/in/md-kamrul-20a5a2271">
+            <FaLinkedin className="w-5 h-5 text-gray-400 hover:text-blue-700 transition-colors cursor-pointer" />
+          </a>
 
-          <FaTwitter className="w-5 h-5 text-gray-400 hover:text-white transition-colors cursor-pointer" />
+          <FaTwitter className="w-5 h-5 text-gray-400 hover:text-blue-700 transition-colors cursor-pointer" />
 
-          <MdEmail className="w-5 h-5 text-gray-400 hover:text-white transition-colors cursor-pointer" />
+          <a href="mailto:kamrul.dev.web@gmail.com">
+            <MdEmail className="w-5 h-5 text-gray-400 hover:text-blue-700 transition-colors cursor-pointer" />
+          </a>
         </div>
       </div>
     </div>

@@ -55,10 +55,16 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4 text-white">Connect</h3>
 
             <div className="flex gap-4 text-gray-400 text-xl">
-              <FaGithub className="hover:text-white hover:scale-110 transition cursor-pointer" />
-              <FaLinkedin className="hover:text-white hover:scale-110 transition cursor-pointer" />
-              <FaTwitter className="hover:text-white hover:scale-110 transition cursor-pointer" />
-              <FaEnvelope className="hover:text-white hover:scale-110 transition cursor-pointer" />
+              <a href="https://github.com/mdkamrul50">
+                <FaGithub className="hover:text-white hover:scale-110 transition cursor-pointer" />
+              </a>
+              <a href="https://www.linkedin.com/in/md-kamrul-20a5a2271">
+                <FaLinkedin className="hover:text-white hover:scale-110 transition cursor-pointer" />
+              </a>
+             
+              <a href="mailto:kamrul.dev.web@gmail.com">
+                <FaEnvelope className="hover:text-white hover:scale-110 transition cursor-pointer" />
+              </a>
             </div>
 
             <p className="text-gray-500 mt-4 text-sm">

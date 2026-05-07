@@ -46,7 +46,7 @@ const projects = [
 export default function TimelineProjects() {
   return (
     <section
-      id="Project"
+      id="project"
       className="bg-[#0a0d1c] text-white py-24 px-6 relative overflow-hidden scroll-mt-28"
     >
       {/* Background Glows */}
