@@ -79,7 +79,7 @@ export default function Navbar() {
           {/* CTA BUTTON */}
           <div className="hidden md:block">
             <Link
-              href="#contact"
+              href="#Contact"
               className="group inline-flex items-center gap-3 px-10 py-3 rounded-2xl 
              text-white font-medium relative overflow-hidden
              backdrop-blur-xl border border-white/20
@@ -127,7 +127,7 @@ export default function Navbar() {
               })}
 
               <Link
-                href="#contact"
+                href="#Contact"
                 onClick={() => setIsOpen(false)}
                 className="group mx-auto mt-6 inline-flex items-center gap-3 px-10 py-4 rounded-2xl text-sm font-semibold text-white bg-neutral-950 border border-white/10"
               >
