@@ -65,7 +65,7 @@ export default function AboutSection() {
             </div>
 
             {/* Stats - Premium Cards */}
-            <div className="grid grid-cols-2 lg:grid-cols-2 gap-6 pt-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 pt-8">
               {/* Stat 1 */}
               <div
                 className="group relative overflow-hidden bg-white/5 hover:bg-white/10 

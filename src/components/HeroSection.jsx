@@ -143,7 +143,7 @@ export default function HeroSection() {
           className="relative flex flex-col items-center justify-center order-1 lg:order-2"
         >
           {/* IMAGE + RINGS CONTAINER */}
-          <div className="relative flex items-center justify-center w-full pt-48">
+          <div className="relative flex items-center justify-center w-full pt-18">
             {/* Glow Circle */}
             <div className="absolute inset-0 flex items-center justify-center">
               {/* Large Outer Ring */}
