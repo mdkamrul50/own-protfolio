@@ -13,6 +13,8 @@ import { SiMongodb } from 'react-icons/si';
 import { useEffect, useState } from 'react';
 import { FaHandSparkles } from 'react-icons/fa6';
 
+
+
 const roles = [
   'MERN Stack Developer',
   'Frontend Developer',
@@ -56,10 +58,7 @@ export default function HeroSection() {
   }, [charIndex, deleting, index]);
 
   return (
-    <div
-    
-      className="relative overflow-hidden min-h-screen bg-linear-to-br from-[#020617] via-[#0b0f1a] to-[#020617] text-white flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20"
-    >
+    <div className="relative overflow-hidden min-h-screen bg-linear-to-br from-[#020617] via-[#0b0f1a] to-[#020617] text-white flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20">
       <div className="max-w-7xl w-full grid lg:grid-cols-2 gap-16 lg:gap-10 items-center">
         {/* LEFT */}
         <motion.div
@@ -321,6 +320,7 @@ shadow-[0_0_30px_rgba(250,204,21,0.15)]"
           </a>
         </div>
       </div>
+
     </div>
   );
 }
