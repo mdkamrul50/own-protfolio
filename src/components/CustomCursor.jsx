@@ -1,6 +1,6 @@
 'use client';
 
-import { MousePointer2 } from 'lucide-react';
+import { MousePointer2, PenTool } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 
 export default function CustomCursor() {
@@ -72,7 +72,7 @@ export default function CustomCursor() {
         ref={dotRef}
         className="fixed top-0 left-0 z-[9999] pointer-events-none"
       >
-        <MousePointer2
+        <PenTool
           className="text-cyan-400 drop-shadow-[0_0_10px_rgba(34,211,238,0.8)]"
           size={24}
         />
