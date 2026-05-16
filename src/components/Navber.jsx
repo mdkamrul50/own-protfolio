@@ -35,7 +35,7 @@ export default function Navbar() {
   }, []);
 
   const navItems = [
-    { label: 'Home', href:'#/', id: '/' },
+    { label: 'Home', href: '#/', id: '/' },
     { label: 'About', href: '#About', id: 'About' },
     { label: 'Services', href: '#Service', id: 'Service' },
     { label: 'Projects', href: '#project', id: 'project' },
@@ -43,8 +43,28 @@ export default function Navbar() {
     { label: 'Contact', href: '#Contact', id: 'Contact' },
   ];
 
+  // add this state
+  const [scrolled, setScrolled] = useState(false);
+
+  // add this useEffect under your other useEffect
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <nav className="bg-gradient-to-r from-[#0A0A1F] via-[#0F0B2E] to-[#1A0F3D] border-b border-white/10 backdrop-blur-xl fixed w-full z-50">
+    <nav
+      className={`fixed w-full z-50 transition-all duration-500 ${
+        scrolled
+          ? 'bg-white/5 backdrop-blur-2xl border-b border-white/5 shadow-[0_8px_32px_rgba(0,0,0,0.35)]'
+          : 'bg-transparent border-b border-transparent'
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* LOGO */}

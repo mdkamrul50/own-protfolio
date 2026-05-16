@@ -19,7 +19,8 @@ import {
   SiExpress,
   SiMongodb,
   SiVercel,
-  SiPostman,
+
+  SiNetlify,
   SiNextdotjs,
 } from 'react-icons/si';
 
@@ -31,6 +32,7 @@ import {
   TbBrandFramerMotion,
   TbDeviceMobile,
 } from 'react-icons/tb';
+import { VscVscode } from 'react-icons/vsc';
 
 const SkillsSection = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -88,7 +90,6 @@ const SkillsSection = () => {
       color: 'from-purple-400 to-violet-400',
       skills: [
         { name: 'MongoDB', icon: SiMongodb, color: '#47A248', level: 88 },
-        { name: 'Mongoose', icon: TbDatabase, color: '#ffffff', level: 85 },
       ],
     },
     {
@@ -99,8 +100,8 @@ const SkillsSection = () => {
       skills: [
         { name: 'Git', icon: FaGithub, color: '#F05032', level: 90 },
         { name: 'GitHub', icon: FaGithub, color: '#ffffff', level: 92 },
-        { name: 'VS Code', icon: TbTools, color: '#3B82F6', level: 95 },
-        { name: 'Postman', icon: SiPostman, color: '#FF6C37', level: 85 },
+        { name: 'VS Code', icon: VscVscode, color: '#3B82F6', level: 95 },
+        { name: 'Netlify', icon: SiNetlify, color: '#00C7B7', level: 85 },
         { name: 'Vercel', icon: SiVercel, color: '#ffffff', level: 88 },
       ],
     },
@@ -128,7 +129,10 @@ const SkillsSection = () => {
   ];
 
   return (
-    <section className="relative min-h-screen py-24 overflow-hidden bg-[#0a0d1c]">
+    <section
+      id="skills-section"
+      className="relative min-h-screen py-24 overflow-hidden bg-[#0a0d1c]"
+    >
       {/* Background blobs (RESTORED) */}
       <motion.div
         className="absolute top-[-20%] left-[-10%] w-[500px] h-[500px] bg-blue-500/20 rounded-full blur-[120px]"

@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 
 const projects = [
   {
+    id: 1,
     title: 'Game Vault',
     desc: 'Game Vault Library is a modern web application that helps users organize and manage their personal game collection in one place. It provides a clean and user-friendly interface to browse, track, and view game details easily. The platform focuses on smooth performance and a simple experience, making game management more organized and visually appealing for gamers.',
     tech: ['React.js', 'Tailwind', 'Daisy UI', 'react Icon'],
@@ -12,6 +13,7 @@ const projects = [
     image: 'https://i.ibb.co.com/whhBpBX4/Screenshot-2026-04-11-173158.png',
   },
   {
+    id: 2,
     title: 'Close-Friends',
     desc: 'Close Friends is a modern social web application built with React that allows users to stay connected with their close friends in a private and simple way. It focuses on small group interactions where users can create private circles, share updates, photos, and moments only with selected people. The app is designed to feel more personal than traditional social media, offering a clean interface, smooth user experience, and fast performance. It helps users maintain stronger relationships by keeping communication more private, meaningful, and organized.',
     tech: ['React', 'Tailwind', 'Daisy UI'],
@@ -19,6 +21,7 @@ const projects = [
     image: 'https://i.ibb.co.com/nMjYLGz5/Screenshot-2026-05-06-204514.png',
   },
   {
+    id: 3,
     title: 'skill-sphere',
     desc: 'Skill Sphere is a modern web application built with Next.js that provides a smooth and fast user experience for managing and exploring skills in an organized way. It is designed with a clean UI, responsive layout, and optimized performance using server-side rendering features of Next.js.',
     tech: [
@@ -35,6 +38,7 @@ const projects = [
     image: 'https://i.ibb.co.com/q32tJhQy/Screenshot-2026-05-06-205715.png',
   },
   {
+    id: 4,
     title: 'Modern Portfolio Website',
     desc: 'High-performance animated portfolio with Framer Motion, glassmorphism, and smooth interactions.',
     tech: ['Next.js', 'Framer Motion', 'Tailwind'],
@@ -129,6 +133,25 @@ export default function TimelineProjects() {
                             {tech}
                           </span>
                         ))}
+                      </div>
+                      <div className="flex  mt-5">
+                        <a
+                          href={`/project/${project.id}`}
+                          className="group relative inline-flex items-center gap-2 px-5 py-3 
+    rounded-2xl border border-white/10 bg-white/5
+    transition-all duration-300 text-sm font-medium text-white
+    overflow-hidden"
+                        >
+                          {/* Soft gradient hover background */}
+                          <span className="absolute inset-0 bg-gradient-to-r from-purple-500/30 via-purple-500/70 to-blue-500/70 opacity-0 group-hover:opacity-100 transition-all duration-500" />
+
+                          <span className="relative z-10 flex items-center gap-2">
+                            View Details
+                            <span className="transition-transform duration-300 group-hover:translate-x-1">
+                              →
+                            </span>
+                          </span>
+                        </a>
                       </div>
                     </div>
 
